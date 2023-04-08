@@ -39,7 +39,7 @@ export async function getAddressFromCEP(req: AuthenticatedRequest, res: Response
       return res.sendStatus(httpStatus.NO_CONTENT);
     }
     if (error.name === 'NoMatchingCEP') {
-      return res.sendStatus(httpStatus.NOT_FOUND);
+      return res.sendStatus(httpStatus.NO_CONTENT);
     }
   }
 }
