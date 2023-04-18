@@ -1,3 +1,4 @@
+import { Ticket } from '@prisma/client';
 import { prisma } from '@/config';
 
 function getTickets(enrollmentId: number) {
@@ -25,11 +26,17 @@ function getTicketType(id: number) {
   });
 }
 
+function createTicket(ticket: any) {
+  return prisma.ticket.create({
+    data: ticket,
+  });
+}
 const ticketsRepository = {
   getTicketsTypes,
   getTickets,
   getTicketType,
   getTicket,
+  createTicket,
 };
 
 export default ticketsRepository;

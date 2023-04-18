@@ -18,8 +18,16 @@ export async function getTickets(userId: number): Promise<Ticket> {
 export async function createTicket(ticketTypeId: number, userId: number) {
   const enrollment = await enrollmentRepository.findWithAddressByUserId(userId);
   if (!enrollment) throw notFoundError();
+
   const ticketType = await ticketsRepository.getTicketType(ticketTypeId);
-  console.log(ticketType);
+  const ticket = {
+    status: 'RESERVED',
+    ticketTypeId,
+    enrollmentId: enrollment.id,
+    ticketType,
+  };
+  const result = await ticketsRepository.createTicket(ticket);
+  return result;
 }
 
 const ticketsService = {
