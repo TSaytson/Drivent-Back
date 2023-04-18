@@ -14,6 +14,7 @@ export async function getPayment(ticketId: number, userId: number) {
 }
 
 export async function createPayment(ticketId: number, userId: number) {
+  if (!ticketId) throw ticketIdError();
   const ticketFound = await ticketsRepository.getTicket(ticketId);
   if (!ticketFound) throw ticketNotFound();
   const enrollment = await enrollmentRepository.findWithAddressByUserId(userId);
