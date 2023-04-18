@@ -1,7 +1,7 @@
 import { prisma } from '@/config';
 
 function getTickets() {
-  return prisma.ticket.findUnique;
+  return prisma.ticket.findMany();
 }
 
 function getTicketsTypes() {
