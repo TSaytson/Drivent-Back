@@ -1,6 +1,10 @@
 import { Ticket } from '@prisma/client';
 import { prisma } from '@/config';
 
+function getTicketsTypes() {
+  return prisma.ticketType.findMany();
+}
+
 function getTickets(enrollmentId: number) {
   return prisma.ticket.findFirst({
     where: { enrollmentId },
@@ -16,21 +20,18 @@ function getTicket(id: number) {
   });
 }
 
-function getTicketsTypes() {
-  return prisma.ticketType.findMany();
-}
-
 function getTicketType(id: number) {
   return prisma.ticketType.findFirst({
     where: { id },
   });
 }
 
-function createTicket(ticket: any) {
+function createTicket(ticket: Omit<Ticket, 'id' | 'createdAt' | 'updatedAt'>) {
   return prisma.ticket.create({
     data: ticket,
   });
 }
+
 const ticketsRepository = {
   getTicketsTypes,
   getTickets,
