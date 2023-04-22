@@ -143,7 +143,7 @@ describe('POST /payments/process', () => {
       const body = { cardData: generateCreditCardData() };
 
       const response = await server.post('/payments/process').set('Authorization', `Bearer ${token}`).send(body);
-
+      console.log(response.body);
       expect(response.status).toEqual(httpStatus.BAD_REQUEST);
     });
 

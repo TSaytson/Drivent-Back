@@ -1,4 +1,4 @@
-import { Ticket } from '@prisma/client';
+import { Ticket, TicketStatus } from '@prisma/client';
 import { prisma } from '@/config';
 
 function getTicketsTypes() {
@@ -20,6 +20,13 @@ function getTicket(id: number) {
   });
 }
 
+function getTicketWithType(id: number) {
+  return prisma.ticket.findFirst({
+    where: { id },
+    include: { TicketType: true },
+  });
+}
+
 function getTicketType(id: number) {
   return prisma.ticketType.findFirst({
     where: { id },
@@ -32,12 +39,23 @@ function createTicket(ticket: Omit<Ticket, 'id' | 'createdAt' | 'updatedAt'>) {
   });
 }
 
+function updateTicketStatus(id: number) {
+  return prisma.ticket.update({
+    where: { id },
+    data: {
+      status: TicketStatus.PAID,
+    },
+  });
+}
+
 const ticketsRepository = {
   getTicketsTypes,
   getTickets,
   getTicketType,
   getTicket,
+  getTicketWithType,
   createTicket,
+  updateTicketStatus,
 };
 
 export default ticketsRepository;
