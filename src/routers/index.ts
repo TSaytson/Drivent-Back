@@ -5,6 +5,7 @@ import { eventsRouter } from './events-router';
 import { enrollmentsRouter } from './enrollments-router';
 import { ticketsRouter } from './tickets-router';
 import { paymentsRouter } from './payments-router';
+import { hotelsRouter } from './hotels-router';
 
 const routes = Router();
 
@@ -14,6 +15,7 @@ routes
   .use('/event', eventsRouter)
   .use('/enrollments', enrollmentsRouter)
   .use('/tickets', ticketsRouter)
-  .use('/payments', paymentsRouter);
+  .use('/payments', paymentsRouter)
+  .use('/hotels', hotelsRouter);
 
 export default routes;

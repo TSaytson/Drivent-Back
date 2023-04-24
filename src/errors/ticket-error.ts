@@ -20,3 +20,24 @@ export function ticketOwnerError(): ApplicationError {
     message: 'Ticket does not belong to user',
   };
 }
+
+export function notPaidTicketError(): ApplicationError {
+  return {
+    name: 'NotPaidTicketError',
+    message: 'Ticket has not been paid yet',
+  };
+}
+
+export function remoteTicketError(): ApplicationError {
+  return {
+    name: 'RemoteTicketError',
+    message: 'Ticket type is for remote event',
+  };
+}
+
+export function hotelNotIncludedError(): ApplicationError {
+  return {
+    name: 'HotelNotIncludedError',
+    message: 'Ticket has no hotel included',
+  };
+}

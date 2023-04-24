@@ -13,3 +13,17 @@ export function noCEPMatch(): ApplicationError {
     message: 'There is no CEP matching',
   };
 }
+
+export function noEnrollmentFound(): ApplicationError {
+  return {
+    name: 'NoEnrollmentFound',
+    message: 'There is no Enrollment for this ticket',
+  };
+}
+
+export function noHotelsFoundError(): ApplicationError {
+  return {
+    name: 'NoHotelsFoundError',
+    message: 'There is no hotel registred',
+  };
+}
