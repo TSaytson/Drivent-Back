@@ -23,7 +23,7 @@ export async function getHotels(req: AuthenticatedRequest, res: Response) {
       error.name === 'NoEnrollmentFound' ||
       error.name === 'NoHotelsFoundError'
     )
-      return res.sendStatus(httpStatus.NOT_FOUND);
+      return res.status(httpStatus.NOT_FOUND).send(error.message);
   }
 }
 
@@ -47,7 +47,8 @@ export async function getHotelById(req: AuthenticatedRequest, res: Response) {
       error.name === 'TicketNotFoundError' ||
       error.name === 'NoEnrollmentFound' ||
       error.name === 'NoHotelsFoundError'
-    )
-      return res.sendStatus(httpStatus.NOT_FOUND);
+    ) {
+      return res.status(httpStatus.NOT_FOUND).send(error.message);
+    }
   }
 }
