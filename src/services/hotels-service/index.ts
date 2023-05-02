@@ -1,12 +1,10 @@
 import hotelRepository from '@/repositories/hotel-repository';
-import { verifyTicketAndEnrollment } from '@/helpers';
+import { verifyTicketAndEnrollment, verifyTicketForBooking } from '@/helpers/';
 import { hotelNotIncludedError, noHotelsFoundError, notPaidTicketError, remoteTicketError } from '@/errors';
 
 export async function getHotels(ticketId: number, userId: number) {
   const ticket = await verifyTicketAndEnrollment(ticketId, userId);
-  if (ticket.status !== 'PAID') throw notPaidTicketError();
-  if (ticket.TicketType.isRemote) throw remoteTicketError();
-  if (!ticket.TicketType.includesHotel) throw hotelNotIncludedError();
+  await verifyTicketForBooking(ticket.id, userId);
   const hotels = await hotelRepository.getHotels();
   if (!hotels.length) throw noHotelsFoundError();
   return hotels;
@@ -14,10 +12,9 @@ export async function getHotels(ticketId: number, userId: number) {
 
 export async function getHotelById(ticketId: number, userId: number, hotelId: number) {
   const ticket = await verifyTicketAndEnrollment(ticketId, userId);
-  if (ticket.status !== 'PAID') throw notPaidTicketError();
-  if (ticket.TicketType.isRemote) throw remoteTicketError();
-  if (!ticket.TicketType.includesHotel) throw hotelNotIncludedError();
-  return await hotelRepository.getHotelById(hotelId);
+  await verifyTicketForBooking(ticket.id, userId);
+  const hotel = await hotelRepository.getHotelById(hotelId);
+  if (!hotel) throw noHotelsFoundError();
 }
 
 const hotelsSerivce = {

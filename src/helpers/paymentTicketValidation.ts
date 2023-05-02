@@ -2,12 +2,12 @@ import { noEnrollmentFound, ticketIdError, ticketNotFound, ticketOwnerError } fr
 import ticketsRepository from '@/repositories/tickets-repository';
 import enrollmentRepository from '@/repositories/enrollment-repository';
 
-export async function verifyTicketAndEnrollment(ticketId: number, userId: number) {
+export async function verifyTicketAndEnrollment(userId: number, ticketId?: number) {
   if (!ticketId) throw ticketIdError();
-  const ticket = await ticketsRepository.getTicketWithType(ticketId);
-  if (!ticket) throw ticketNotFound();
   const enrollment = await enrollmentRepository.findWithAddressByUserId(userId);
   if (!enrollment) throw noEnrollmentFound();
+  const ticket = await ticketsRepository.getTicketByEnrollmentId(enrollment.id);
+  if (!ticket) throw ticketNotFound();
   if (enrollment.id !== ticket.enrollmentId) throw ticketOwnerError();
-  return ticket;
+  return { ticket, enrollment };
 }

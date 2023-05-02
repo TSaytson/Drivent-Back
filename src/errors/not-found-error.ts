@@ -27,3 +27,10 @@ export function noHotelsFoundError(): ApplicationError {
     message: 'There is no hotel registred',
   };
 }
+
+export function roomNotFoundError(): ApplicationError {
+  return {
+    name: 'RoomNotFoundError',
+    message: 'There is no such room',
+  };
+}

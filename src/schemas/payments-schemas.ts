@@ -1,6 +1,7 @@
 import joi from 'joi';
+import { PaymentParams } from '@/services/payments-service';
 
-export const paymentSchema = joi.object({
+export const paymentSchema = joi.object<PaymentParams>({
   ticketId: joi.number().integer().min(1).required(),
   cardData: joi
     .object({

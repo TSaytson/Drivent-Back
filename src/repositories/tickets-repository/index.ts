@@ -5,7 +5,7 @@ function getTicketsTypes() {
   return prisma.ticketType.findMany();
 }
 
-function getTickets(enrollmentId: number) {
+function getTicketByEnrollmentId(enrollmentId: number) {
   return prisma.ticket.findFirst({
     where: { enrollmentId },
     include: {
@@ -50,7 +50,7 @@ function updateTicketStatus(id: number) {
 
 const ticketsRepository = {
   getTicketsTypes,
-  getTickets,
+  getTicketByEnrollmentId,
   getTicketType,
   getTicket,
   getTicketWithType,

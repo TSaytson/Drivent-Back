@@ -2,7 +2,7 @@ import { Payment } from '@prisma/client';
 import { PaymentBody } from '@/protocols/index';
 import paymentRepository from '@/repositories/payment-repository';
 import ticketsRepository from '@/repositories/tickets-repository';
-import { verifyTicketAndEnrollment } from '@/helpers';
+import { verifyTicketAndEnrollment } from '@/helpers/';
 
 export async function getPayment(ticketId: number, userId: number) {
   await verifyTicketAndEnrollment(ticketId, userId);
@@ -11,7 +11,7 @@ export async function getPayment(ticketId: number, userId: number) {
 }
 
 export async function createPayment({ ticketId, cardData }: PaymentBody, userId: number) {
-  const ticket = await verifyTicketAndEnrollment(ticketId, userId);
+  const { ticket } = await verifyTicketAndEnrollment(ticketId, userId);
 
   const payment: Omit<Payment, 'id' | 'createdAt' | 'updatedAt'> = {
     ticketId,
@@ -24,6 +24,17 @@ export async function createPayment({ ticketId, cardData }: PaymentBody, userId:
   await ticketsRepository.updateTicketStatus(ticketId);
   return result;
 }
+
+export type PaymentParams = {
+  ticketId: number;
+  cardData: {
+    issuer: string;
+    number: number;
+    name: string;
+    expirationDate: string;
+    cvv: number;
+  };
+};
 
 const paymentsService = {
   getPayment,

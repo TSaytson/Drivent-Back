@@ -22,3 +22,26 @@ export async function createTicket(enrollmentId: number, ticketTypeId: number, s
     },
   });
 }
+
+export async function updateTicketStatusPaid(ticketId: number) {
+  return prisma.ticket.update({
+    where: {
+      id: ticketId,
+    },
+    data: {
+      status: 'PAID',
+    },
+  });
+}
+
+export async function updateTicketIncludesHotel(ticketId: number) {
+  return prisma.ticketType.update({
+    where: {
+      id: ticketId,
+    },
+    data: {
+      includesHotel: true,
+      isRemote: false,
+    },
+  });
+}
