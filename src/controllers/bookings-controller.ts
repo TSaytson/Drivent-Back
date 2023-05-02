@@ -34,7 +34,8 @@ export async function createBooking(req: AuthenticatedRequest, res: Response) {
       error.name === 'HotelNotIncludedError'
     )
       return res.status(403).send(error.message);
-    if (error.name === 'RoomNotFoundError') return res.status(404).send(error.message);
+    if (error.name === 'RoomNotFoundError' || error.name === 'BookingNotFoundError')
+      return res.status(404).send(error.message);
     console.log(error.message);
     return res.status(httpStatus.BAD_REQUEST).send(error.message);
   }

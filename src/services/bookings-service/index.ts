@@ -1,26 +1,33 @@
 import { Booking } from '@prisma/client';
-import { roomNotFoundError } from '@/errors';
+import { bookingNotFoundError, roomNotFoundError, maximumCapacityError } from '@/errors';
 import { verifyTicketForBooking } from '@/helpers';
 import bookingRepository from '@/repositories/booking-repository';
+import roomRepository from '@/repositories/room-repository';
 
 async function getBooking(userId: number) {
   await verifyTicketForBooking(userId);
-  const room = await bookingRepository.findBookingByUserId(userId);
-  if (!room) throw roomNotFoundError();
-  return room;
+  const booking = await bookingRepository.findBookingByUserId(userId);
+  if (!booking) throw bookingNotFoundError();
+  return booking;
 }
 
-async function createBooking(userId: number, bookingId: number) {
+async function createBooking(userId: number, roomId: number) {
   await verifyTicketForBooking(userId);
-  const room = await bookingRepository.findBooking(bookingId);
+  const room = await roomRepository.findRoom(roomId);
   if (!room) throw roomNotFoundError();
+  const bookings = await bookingRepository.findBookingByRoom(roomId);
+  if (!bookings.length) throw bookingNotFoundError();
+  if (bookings.length >= room.capacity) throw maximumCapacityError();
   return await bookingRepository.createBooking(room.id, userId);
 }
 
 async function updateBooking(userId: number, bookingId: number, roomId: number) {
   await verifyTicketForBooking(userId);
-  const room = await bookingRepository.findBooking(bookingId);
+  const room = await roomRepository.findRoom(roomId);
   if (!room) throw roomNotFoundError();
+  const bookings = await bookingRepository.findBookingByRoom(roomId);
+  if (!bookings.length) throw bookingNotFoundError();
+  if (bookings.length >= room.capacity) throw maximumCapacityError();
   return await bookingRepository.updateBooking(bookingId, roomId);
 }
 export type BookingParams = Omit<Booking, 'id' | 'userId' | 'createdAt' | 'updatedAt'>;

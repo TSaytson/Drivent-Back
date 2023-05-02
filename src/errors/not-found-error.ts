@@ -34,3 +34,10 @@ export function roomNotFoundError(): ApplicationError {
     message: 'There is no such room',
   };
 }
+
+export function bookingNotFoundError(): ApplicationError {
+  return {
+    name: 'BookingNotFoundError',
+    message: 'There is no such booking',
+  };
+}
