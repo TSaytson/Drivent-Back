@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">65.38% </span>
+                <span class="strong">38.88% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/26</span>
+                <span class='fraction'>7/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/7</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.94% </span>
+                <span class="strong">43.75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>15/19</span>
+                <span class='fraction'>7/16</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -88,24 +88,18 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -120,25 +114,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import hotelRepository from '@/repositories/hotel-repository';
-import { verifyTicketAndEnrollment } from '@/helpers';
-import { hotelNotIncludedError, noHotelsFoundError, notPaidTicketError, remoteTicketError } from '@/errors';
+import { verifyTicketAndEnrollment, verifyTicketForBooking } from '@/helpers/';
+import { noHotelsFoundError } from '@/errors';
 &nbsp;
-export async function getHotels(ticketId: number, userId: number) {
-  const ticket = await verifyTicketAndEnrollment(ticketId, userId);
-  if (ticket.status !== 'PAID') throw notPaidTicketError();
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (ticket.TicketType.isRemote) <span class="cstat-no" title="statement not covered" >throw remoteTicketError();</span>
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (!ticket.TicketType.includesHotel) <span class="cstat-no" title="statement not covered" >throw hotelNotIncludedError();</span>
-  const hotels = await hotelRepository.getHotels();
-  if (!hotels.length) throw noHotelsFoundError();
-  return hotels;
+export async function <span class="fstat-no" title="function not covered" >getHotels(</span>ticketId: number, userId: number) {
+<span class="cstat-no" title="statement not covered" >  await verifyTicketAndEnrollment(ticketId, userId);</span>
+<span class="cstat-no" title="statement not covered" >  await verifyTicketForBooking(userId);</span>
+  const hotels = <span class="cstat-no" title="statement not covered" >await hotelRepository.getHotels();</span>
+<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (!hotels.length) <span class="cstat-no" title="statement not covered" >throw noHotelsFoundError();</span></span>
+<span class="cstat-no" title="statement not covered" >  return hotels;</span>
 }
 &nbsp;
-export async function getHotelById(ticketId: number, userId: number, hotelId: number) {
-  const ticket = await verifyTicketAndEnrollment(ticketId, userId);
-<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (ticket.status !== 'PAID') <span class="cstat-no" title="statement not covered" >throw notPaidTicketError();</span></span>
-<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (ticket.TicketType.isRemote) <span class="cstat-no" title="statement not covered" >throw remoteTicketError();</span></span>
-<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (!ticket.TicketType.includesHotel) <span class="cstat-no" title="statement not covered" >throw hotelNotIncludedError();</span></span>
-<span class="cstat-no" title="statement not covered" >  return await hotelRepository.getHotelById(hotelId);</span>
+export async function <span class="fstat-no" title="function not covered" >getHotelById(</span>ticketId: number, userId: number, hotelId: number) {
+<span class="cstat-no" title="statement not covered" >  await verifyTicketAndEnrollment(ticketId, userId);</span>
+<span class="cstat-no" title="statement not covered" >  await verifyTicketForBooking(userId);</span>
+  const hotel = <span class="cstat-no" title="statement not covered" >await hotelRepository.getHotelById(hotelId);</span>
+<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (!hotel) <span class="cstat-no" title="statement not covered" >throw noHotelsFoundError();</span></span>
 }
 &nbsp;
 const hotelsSerivce = {
@@ -154,7 +145,7 @@ export default hotelsSerivce;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Apr 26 2023 06:48:22 GMT-0300 (Brasilia Standard Time)
+                at Tue May 02 2023 17:52:19 GMT-0300 (Brasilia Standard Time)
             </div>
         <script src="../../../prettify.js"></script>
         <script>

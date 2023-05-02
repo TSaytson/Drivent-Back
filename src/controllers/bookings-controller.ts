@@ -15,7 +15,8 @@ export async function getBooking(req: AuthenticatedRequest, res: Response) {
       error.name === 'HotelNotIncludedError'
     )
       return res.status(403).send(error.message);
-    if (error.name === 'RoomNotFoundError') return res.status(404).send(error.message);
+    if (error.name === 'RoomNotFoundError' || error.name === 'BookingNotFoundError')
+      return res.status(404).send(error.message);
     console.log(error.message);
     return res.status(httpStatus.BAD_REQUEST).send(error.message);
   }
@@ -31,7 +32,8 @@ export async function createBooking(req: AuthenticatedRequest, res: Response) {
     if (
       error.name === 'NotPaidTicketError' ||
       error.name === 'RemoteTicketError' ||
-      error.name === 'HotelNotIncludedError'
+      error.name === 'HotelNotIncludedError' ||
+      error.name === 'BookingConflictError'
     )
       return res.status(403).send(error.message);
     if (error.name === 'RoomNotFoundError' || error.name === 'BookingNotFoundError')

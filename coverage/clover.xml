@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1682502502109" clover="3.2.0">
-  <project timestamp="1682502502109" name="All files">
-    <metrics statements="608" coveredstatements="376" conditionals="111" coveredconditionals="26" methods="102" coveredmethods="26" elements="821" coveredelements="428" complexity="0" loc="608" ncloc="608" packages="25" files="67" classes="67"/>
+<coverage generated="1683060739472" clover="3.2.0">
+  <project timestamp="1683060739472" name="All files">
+    <metrics statements="754" coveredstatements="468" conditionals="141" coveredconditionals="29" methods="129" coveredmethods="41" elements="1024" coveredelements="538" complexity="0" loc="754" ncloc="754" packages="30" files="80" classes="80"/>
     <package name="src">
-      <metrics statements="28" coveredstatements="26" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
+      <metrics statements="17" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <file name="app.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/app.ts">
         <metrics statements="17" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -23,20 +23,6 @@
         <line num="26" count="1" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
-      </file>
-      <file name="helpers.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/helpers.ts">
-        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="8" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="5" type="cond" truecount="0" falsecount="1"/>
-        <line num="11" count="5" type="cond" truecount="0" falsecount="1"/>
-        <line num="12" count="5" type="stmt"/>
       </file>
     </package>
     <package name="src.config">
@@ -65,7 +51,7 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="116" coveredstatements="50" conditionals="32" coveredconditionals="14" methods="13" coveredmethods="2"/>
+      <metrics statements="155" coveredstatements="56" conditionals="54" coveredconditionals="14" methods="16" coveredmethods="2"/>
       <file name="authentication-controller.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/controllers/authentication-controller.ts">
         <metrics statements="8" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
@@ -76,6 +62,46 @@
         <line num="9" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="bookings-controller.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/controllers/bookings-controller.ts">
+        <metrics statements="37" coveredstatements="22" conditionals="20" coveredconditionals="14" methods="3" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="cond" truecount="3" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="cond" truecount="2" falsecount="1"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
       </file>
       <file name="enrollments-controller.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/controllers/enrollments-controller.ts">
         <metrics statements="20" coveredstatements="5" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
@@ -111,42 +137,43 @@
         <line num="10" count="0" type="stmt"/>
       </file>
       <file name="hotels-controller.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/controllers/hotels-controller.ts">
-        <metrics statements="23" coveredstatements="21" conditionals="18" coveredconditionals="14" methods="2" coveredmethods="2"/>
+        <metrics statements="23" coveredstatements="4" conditionals="18" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="7" count="7" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="10" count="7" type="stmt"/>
-        <line num="11" count="7" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="14" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="20" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="26" count="3" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="39" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="45" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="51" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="50" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/controllers/index.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
       </file>
       <file name="payments-controller.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/controllers/payments-controller.ts">
-        <metrics statements="21" coveredstatements="4" conditionals="7" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="22" coveredstatements="4" conditionals="9" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
@@ -166,8 +193,9 @@
         <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="28" count="0" type="stmt"/>
         <line num="30" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="31" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="32" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="1"/>
       </file>
       <file name="tickets-controller.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/controllers/tickets-controller.ts">
         <metrics statements="21" coveredstatements="5" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
@@ -208,19 +236,26 @@
       </file>
     </package>
     <package name="src.errors">
-      <metrics statements="40" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="4"/>
+      <metrics statements="49" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="20" coveredmethods="5"/>
       <file name="cannot-enroll-before-start-date-error.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/cannot-enroll-before-start-date-error.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
       <file name="conflict-error.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/conflict-error.ts">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="forbidden-errors.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/forbidden-errors.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/index.ts">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -229,6 +264,7 @@
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
       <file name="invalid-data-error.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/invalid-data-error.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -241,7 +277,27 @@
         <line num="4" count="0" type="stmt"/>
       </file>
       <file name="not-found-error.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/not-found-error.ts">
-        <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+      <file name="request-error.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/request-error.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="ticket-error.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/ticket-error.ts">
+        <metrics statements="12" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
@@ -250,54 +306,76 @@
         <line num="18" count="0" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
-      </file>
-      <file name="request-error.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/request-error.ts">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-      </file>
-      <file name="ticket-error.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/ticket-error.ts">
-        <metrics statements="12" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
       </file>
       <file name="unauthorized-error.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/errors/unauthorized-error.ts">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.helpers">
+      <metrics statements="26" coveredstatements="19" conditionals="10" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <file name="bookingTicketValidation.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/helpers/bookingTicketValidation.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="5" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="5" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="5" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/helpers/index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="paymentTicketValidation.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/helpers/paymentTicketValidation.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="51" coveredstatements="26" conditionals="15" coveredconditionals="0" methods="8" coveredmethods="3"/>
+      <metrics statements="51" coveredstatements="31" conditionals="15" coveredconditionals="3" methods="8" coveredmethods="5"/>
       <file name="authentication-middleware.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/middlewares/authentication-middleware.ts">
-        <metrics statements="17" coveredstatements="15" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="10" count="8" type="cond" truecount="0" falsecount="1"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="13" count="8" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="8" type="stmt"/>
-        <line num="16" count="8" type="stmt"/>
+        <line num="9" count="12" type="stmt"/>
+        <line num="10" count="12" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="13" count="10" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
         <line num="18" count="8" type="stmt"/>
-        <line num="23" count="8" type="cond" truecount="0" falsecount="1"/>
-        <line num="25" count="8" type="stmt"/>
-        <line num="27" count="8" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <line num="23" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
       </file>
       <file name="error-handling-middleware.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/middlewares/error-handling-middleware.ts">
         <metrics statements="20" coveredstatements="2" conditionals="10" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -329,17 +407,17 @@
         <line num="3" count="1" type="stmt"/>
       </file>
       <file name="validation-middleware.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/middlewares/validation-middleware.ts">
-        <metrics statements="11" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
+        <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="3"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="21" count="0" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="20" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="3" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
       </file>
     </package>
@@ -353,12 +431,26 @@
         <line num="24" count="1" type="stmt"/>
       </file>
     </package>
+    <package name="src.repositories.booking-repository">
+      <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
+      <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/repositories/booking-repository/index.ts">
+        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="src.repositories.enrollment-repository">
       <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/repositories/enrollment-repository/index.ts">
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
@@ -375,11 +467,11 @@
       </file>
     </package>
     <package name="src.repositories.hotel-repository">
-      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/repositories/hotel-repository/index.ts">
-        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
@@ -394,6 +486,16 @@
         <line num="11" count="0" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.repositories.room-repository">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/repositories/room-repository/index.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.session-repository">
@@ -413,9 +515,9 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
@@ -438,7 +540,7 @@
       </file>
     </package>
     <package name="src.routers">
-      <metrics statements="57" coveredstatements="57" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="65" coveredstatements="65" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="authentication-router.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/routers/authentication-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -448,6 +550,16 @@
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="bookings-router.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/routers/bookings-router.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
       <file name="enrollments-router.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/routers/enrollments-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -477,7 +589,7 @@
         <line num="9" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/routers/index.ts">
-        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -486,9 +598,10 @@
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
       </file>
       <file name="payments-router.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/routers/payments-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -522,8 +635,13 @@
       </file>
     </package>
     <package name="src.schemas">
-      <metrics statements="32" coveredstatements="20" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <metrics statements="34" coveredstatements="22" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="1"/>
       <file name="authentication-schemas.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/schemas/authentication-schemas.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="bookings-schemas.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/schemas/bookings-schemas.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -561,12 +679,12 @@
       <file name="payments-schemas.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/schemas/payments-schemas.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
       <file name="tickets-schemas.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/schemas/tickets-schemas.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
       <file name="users-schemas.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/schemas/users-schemas.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -605,6 +723,36 @@
         <line num="55" count="1" type="stmt"/>
         <line num="59" count="1" type="stmt"/>
         <line num="60" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.bookings-service">
+      <metrics statements="24" coveredstatements="17" conditionals="7" coveredconditionals="3" methods="3" coveredmethods="2"/>
+      <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/services/bookings-service/index.ts">
+        <metrics statements="24" coveredstatements="17" conditionals="7" coveredconditionals="3" methods="3" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.services.enrollments-service">
@@ -665,28 +813,25 @@
       </file>
     </package>
     <package name="src.services.hotels-service">
-      <metrics statements="19" coveredstatements="15" conditionals="7" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="16" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/src/services/hotels-service/index.ts">
-        <metrics statements="19" coveredstatements="15" conditionals="7" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="16" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="7" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="9" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="18" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.services.payments-service">
@@ -706,8 +851,8 @@
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.services.tickets-service">
@@ -734,8 +879,8 @@
         <line num="29" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.services.users-service">
@@ -797,28 +942,34 @@
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="10" count="8" type="stmt"/>
-        <line num="11" count="8" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
-        <line num="14" count="8" type="stmt"/>
-        <line num="15" count="8" type="stmt"/>
-        <line num="16" count="8" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
-        <line num="18" count="8" type="stmt"/>
-        <line num="19" count="8" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="8" type="cond" truecount="1" falsecount="1"/>
-        <line num="24" count="8" type="stmt"/>
-        <line num="26" count="8" type="stmt"/>
-        <line num="28" count="8" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="12" type="stmt"/>
+        <line num="11" count="12" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="13" count="12" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+        <line num="16" count="12" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+        <line num="18" count="12" type="stmt"/>
+        <line num="19" count="12" type="stmt"/>
+        <line num="20" count="12" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
       </file>
     </package>
     <package name="tests.factories">
-      <metrics statements="45" coveredstatements="40" conditionals="18" coveredconditionals="6" methods="9" coveredmethods="5"/>
+      <metrics statements="65" coveredstatements="59" conditionals="18" coveredconditionals="6" methods="15" coveredmethods="10"/>
+      <file name="bookings-factory.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/factories/bookings-factory.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+      </file>
       <file name="enrollments-factory.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/factories/enrollments-factory.ts">
         <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -826,8 +977,8 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="8" type="cond" truecount="1" falsecount="1"/>
-        <line num="11" count="8" type="stmt"/>
+        <line num="9" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="6" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
       </file>
@@ -839,14 +990,26 @@
         <line num="6" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="7" count="0" type="stmt"/>
       </file>
+      <file name="hotels-factory.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/factories/hotels-factory.ts">
+        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+      </file>
       <file name="index.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/factories/index.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
       <file name="payments-factory.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/factories/payments-factory.ts">
         <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -858,22 +1021,33 @@
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
+      <file name="rooms-factory.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/factories/rooms-factory.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+      </file>
       <file name="sessions-factory.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/factories/sessions-factory.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="8" type="stmt"/>
-        <line num="8" count="8" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
       </file>
       <file name="tickets-factory.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/factories/tickets-factory.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="8" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="6" type="stmt"/>
       </file>
       <file name="users-factory.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/factories/users-factory.ts">
         <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
@@ -881,9 +1055,35 @@
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="16" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="16" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
+        <line num="7" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+      </file>
+    </package>
+    <package name="tests.helpers">
+      <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="validationTests-helpers.ts" path="/home/domwick/Documents/Driven/projects/drivent1-ref-initial/tests/helpers/validationTests-helpers.ts">
+        <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
       </file>
     </package>
   </project>

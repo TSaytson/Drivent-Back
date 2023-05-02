@@ -6,3 +6,10 @@ export function conflictError(message: string): ApplicationError {
     message,
   };
 }
+
+export function bookingConflictError(): ApplicationError {
+  return {
+    name: 'BookingConflictError',
+    message: 'Booking already done',
+  };
+}

@@ -1,5 +1,5 @@
 import { Booking } from '@prisma/client';
-import { bookingNotFoundError, roomNotFoundError, maximumCapacityError } from '@/errors';
+import { bookingNotFoundError, roomNotFoundError, maximumCapacityError, bookingConflictError } from '@/errors';
 import { verifyTicketForBooking } from '@/helpers';
 import bookingRepository from '@/repositories/booking-repository';
 import roomRepository from '@/repositories/room-repository';
@@ -16,7 +16,7 @@ async function createBooking(userId: number, roomId: number) {
   const room = await roomRepository.findRoom(roomId);
   if (!room) throw roomNotFoundError();
   const bookings = await bookingRepository.findBookingByRoom(roomId);
-  if (!bookings.length) throw bookingNotFoundError();
+  if (bookings.length) throw bookingConflictError();
   if (bookings.length >= room.capacity) throw maximumCapacityError();
   return await bookingRepository.createBooking(room.id, userId);
 }
