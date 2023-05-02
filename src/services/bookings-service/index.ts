@@ -3,9 +3,9 @@ import { roomNotFoundError } from '@/errors';
 import { verifyTicketForBooking } from '@/helpers';
 import bookingRepository from '@/repositories/booking-repository';
 
-async function getBooking(userId: number, bookingId: number) {
+async function getBooking(userId: number) {
   await verifyTicketForBooking(userId);
-  const room = await bookingRepository.findBooking(bookingId);
+  const room = await bookingRepository.findBookingByUserId(userId);
   if (!room) throw roomNotFoundError();
   return room;
 }

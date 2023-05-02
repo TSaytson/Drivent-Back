@@ -62,6 +62,8 @@ describe('POST /booking', () => {
       roomId: 9999,
     };
     const response = await server.post('/booking').set('Authorization', `Bearer ${token}`).send(body);
+    console.log(response.error);
+
     expect(response.status).toBe(httpStatus.NOT_FOUND);
   });
 });

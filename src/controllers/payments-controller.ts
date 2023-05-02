@@ -28,7 +28,8 @@ export async function createPayment(req: AuthenticatedRequest, res: Response) {
     return res.status(httpStatus.OK).send(response);
   } catch (error) {
     if (error.name === 'TicketIdError') return res.sendStatus(httpStatus.BAD_REQUEST);
-    if (error.name === 'TicketNotFoundError') return res.sendStatus(httpStatus.NOT_FOUND);
+    if (error.name === 'TicketNotFoundError' || error.name === 'NoEnrollmentFound')
+      return res.sendStatus(httpStatus.NOT_FOUND);
     if (error.name === 'TicketOwnerError') return res.sendStatus(httpStatus.UNAUTHORIZED);
   }
 }
