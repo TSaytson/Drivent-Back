@@ -17,14 +17,12 @@ export async function getBooking(req: AuthenticatedRequest, res: Response) {
       return res.status(403).send(error.message);
     if (error.name === 'RoomNotFoundError' || error.name === 'BookingNotFoundError')
       return res.status(404).send(error.message);
-    console.log(error.message);
-    return res.status(httpStatus.BAD_REQUEST).send(error.message);
   }
 }
 
 export async function createBooking(req: AuthenticatedRequest, res: Response) {
   const { userId } = req;
-  const { roomId } = req.body as { roomId: number };
+  const { roomId } = req.body as Record<string, number>;
   try {
     const { id: bookingId } = await bookingsService.createBooking(userId, roomId);
     return res.status(200).send({ bookingId });
@@ -38,15 +36,13 @@ export async function createBooking(req: AuthenticatedRequest, res: Response) {
       return res.status(403).send(error.message);
     if (error.name === 'RoomNotFoundError' || error.name === 'BookingNotFoundError')
       return res.status(404).send(error.message);
-    console.log(error.message);
-    return res.status(httpStatus.BAD_REQUEST).send(error.message);
   }
 }
 
 export async function updateBooking(req: AuthenticatedRequest, res: Response) {
   const { userId } = req;
-  const { roomId } = req.body as { roomId: number };
-  const bookingId = Number(req.params.bookingId);
+  const { roomId } = req.body as Record<string, number>;
+  const bookingId = parseInt(req.params.bookingId);
   try {
     await bookingsService.updateBooking(userId, bookingId, roomId);
     return res.status(200).send({ bookingId });
@@ -54,11 +50,10 @@ export async function updateBooking(req: AuthenticatedRequest, res: Response) {
     if (
       error.name === 'NotPaidTicketError' ||
       error.name === 'RemoteTicketError' ||
-      error.name === 'HotelNotIncludedError'
+      error.name === 'HotelNotIncludedError' ||
+      error.name === 'MaximumCapacityError'
     )
       return res.status(403).send(error.message);
     if (error.name === 'RoomNotFoundError') return res.status(404).send(error.message);
-    console.log(error.message);
-    return res.status(httpStatus.BAD_REQUEST).send(error.message);
   }
 }

@@ -3,7 +3,7 @@ import { verifyTicketAndEnrollment, verifyTicketForBooking } from '@/helpers/';
 import { noHotelsFoundError } from '@/errors';
 
 export async function getHotels(ticketId: number, userId: number) {
-  await verifyTicketAndEnrollment(ticketId, userId);
+  await verifyTicketAndEnrollment({ userId, ticketId });
   await verifyTicketForBooking(userId);
   const hotels = await hotelRepository.getHotels();
   if (!hotels.length) throw noHotelsFoundError();
@@ -11,7 +11,7 @@ export async function getHotels(ticketId: number, userId: number) {
 }
 
 export async function getHotelById(ticketId: number, userId: number, hotelId: number) {
-  await verifyTicketAndEnrollment(ticketId, userId);
+  await verifyTicketAndEnrollment({ ticketId, userId });
   await verifyTicketForBooking(userId);
   const hotel = await hotelRepository.getHotelById(hotelId);
   if (!hotel) throw noHotelsFoundError();

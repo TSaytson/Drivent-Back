@@ -5,13 +5,13 @@ import ticketsRepository from '@/repositories/tickets-repository';
 import { verifyTicketAndEnrollment } from '@/helpers/';
 
 export async function getPayment(ticketId: number, userId: number) {
-  await verifyTicketAndEnrollment(userId, ticketId);
+  await verifyTicketAndEnrollment({ userId, ticketId });
   const payment = await paymentRepository.getPayment(ticketId);
   return payment;
 }
 
 export async function createPayment({ ticketId, cardData }: PaymentBody, userId: number) {
-  const { ticket } = await verifyTicketAndEnrollment(userId, ticketId);
+  const { ticket } = await verifyTicketAndEnrollment({ userId, ticketId });
 
   const payment: Omit<Payment, 'id' | 'createdAt' | 'updatedAt'> = {
     ticketId,

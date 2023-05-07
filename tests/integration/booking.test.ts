@@ -181,6 +181,7 @@ describe('PUT /booking/:bookingId', () => {
     const hotel = await createHotel();
     const room = await createRoom(hotel.id);
     const { id: bookingId } = await createBooking(user.id, room.id);
+    await createBooking(user.id, room.id);
     const body = {
       roomId: room.id,
     };

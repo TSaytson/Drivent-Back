@@ -5,7 +5,7 @@ export async function createRoom(hotelId: number) {
   return prisma.room.create({
     data: {
       name: faker.datatype.number().toString(),
-      capacity: faker.datatype.number(),
+      capacity: faker.datatype.number({ min: 2, max: 2 }),
       hotelId,
     },
   });

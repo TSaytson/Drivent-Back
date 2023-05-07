@@ -24,6 +24,7 @@ export async function getHotels(req: AuthenticatedRequest, res: Response) {
       error.name === 'NoHotelsFoundError'
     )
       return res.status(httpStatus.NOT_FOUND).send(error.message);
+    return res.status(httpStatus.UNPROCESSABLE_ENTITY).send(error.message);
   }
 }
 
@@ -46,8 +47,8 @@ export async function getHotelById(req: AuthenticatedRequest, res: Response) {
       error.name === 'TicketNotFoundError' ||
       error.name === 'NoEnrollmentFound' ||
       error.name === 'NoHotelsFoundError'
-    ) {
+    )
       return res.status(httpStatus.NOT_FOUND).send(error.message);
-    }
+    return res.status(httpStatus.UNPROCESSABLE_ENTITY).send(error.message);
   }
 }

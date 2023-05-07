@@ -2,7 +2,7 @@ import { noEnrollmentFound, ticketIdError, ticketNotFound, ticketOwnerError } fr
 import ticketsRepository from '@/repositories/tickets-repository';
 import enrollmentRepository from '@/repositories/enrollment-repository';
 
-export async function verifyTicketAndEnrollment(userId: number, ticketId: number) {
+export async function verifyTicketAndEnrollment({ userId, ticketId }: { userId: number; ticketId: number }) {
   if (!ticketId) throw ticketIdError();
   const enrollment = await enrollmentRepository.findWithAddressByUserId(userId);
   if (!enrollment) throw noEnrollmentFound();
