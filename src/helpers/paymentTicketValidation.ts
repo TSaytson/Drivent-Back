@@ -6,7 +6,7 @@ export async function verifyTicketAndEnrollment(userId: number, ticketId: number
   if (!ticketId) throw ticketIdError();
   const enrollment = await enrollmentRepository.findWithAddressByUserId(userId);
   if (!enrollment) throw noEnrollmentFound();
-  const ticket = await ticketsRepository.getTicketByEnrollmentId(enrollment.id);
+  const ticket = await ticketsRepository.getTicketWithType(ticketId);
   if (!ticket) throw ticketNotFound();
   if (enrollment.id !== ticket.enrollmentId) throw ticketOwnerError();
   return { ticket, enrollment };

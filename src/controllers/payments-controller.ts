@@ -11,9 +11,9 @@ export async function getPayment(req: AuthenticatedRequest, res: Response) {
     const payment = await paymentsService.getPayment(ticketId, userId);
     return res.status(httpStatus.OK).send(payment);
   } catch (error) {
-    if (error.name === 'TicketIdError') return res.sendStatus(httpStatus.BAD_REQUEST);
-    if (error.name === 'TicketNotFoundError') return res.sendStatus(httpStatus.NOT_FOUND);
-    if (error.name === 'TicketOwnerError') return res.sendStatus(httpStatus.UNAUTHORIZED);
+    if (error.name === 'TicketIdError') return res.status(httpStatus.BAD_REQUEST).send(error.message);
+    if (error.name === 'TicketNotFoundError') return res.status(httpStatus.NOT_FOUND).send(error.message);
+    if (error.name === 'TicketOwnerError') return res.status(httpStatus.UNAUTHORIZED).send(error.message);
   }
 }
 
@@ -27,9 +27,9 @@ export async function createPayment(req: AuthenticatedRequest, res: Response) {
 
     return res.status(httpStatus.OK).send(response);
   } catch (error) {
-    if (error.name === 'TicketIdError') return res.sendStatus(httpStatus.BAD_REQUEST);
+    if (error.name === 'TicketIdError') return res.status(httpStatus.BAD_REQUEST).send(error.message);
     if (error.name === 'TicketNotFoundError' || error.name === 'NoEnrollmentFound')
-      return res.sendStatus(httpStatus.NOT_FOUND);
-    if (error.name === 'TicketOwnerError') return res.sendStatus(httpStatus.UNAUTHORIZED);
+      return res.status(httpStatus.NOT_FOUND).send(error.message);
+    if (error.name === 'TicketOwnerError') return res.status(httpStatus.UNAUTHORIZED).send(error.message);
   }
 }

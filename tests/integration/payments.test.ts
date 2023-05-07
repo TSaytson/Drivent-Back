@@ -79,7 +79,6 @@ describe('GET /payments', () => {
       const ticket = await createTicket(otherUserEnrollment.id, ticketType.id, TicketStatus.RESERVED);
 
       const response = await server.get(`/payments?ticketId=${ticket.id}`).set('Authorization', `Bearer ${token}`);
-
       expect(response.status).toEqual(httpStatus.UNAUTHORIZED);
     });
 
@@ -186,7 +185,6 @@ describe('POST /payments/process', () => {
       const body = { ticketId: ticket.id, cardData: generateCreditCardData() };
 
       const response = await server.post('/payments/process').set('Authorization', `Bearer ${token}`).send(body);
-
       expect(response.status).toEqual(httpStatus.UNAUTHORIZED);
     });
 
