@@ -23,3 +23,15 @@ export function generateCreditCardData() {
     cvv: faker.datatype.number({ min: 100, max: 999 }).toString(),
   };
 }
+
+export function fakeCreditCardData() {
+  const futureDate = faker.date.future();
+
+  return {
+    issuer: faker.name.findName(),
+    number: faker.datatype.number({ min: 100000000000000, max: 999999999999999 }),
+    name: faker.name.findName(),
+    expirationDate: `${futureDate.getMonth() + 1}/${futureDate.getFullYear()}`,
+    cvv: faker.datatype.number({ min: 100, max: 999 }),
+  };
+}

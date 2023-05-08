@@ -1,7 +1,5 @@
-import faker from '@faker-js/faker';
 import { TicketStatus } from '@prisma/client';
 import httpStatus from 'http-status';
-import * as jwt from 'jsonwebtoken';
 import supertest from 'supertest';
 import {
   createEnrollmentWithAddress,
@@ -16,9 +14,7 @@ import {
 } from '../factories';
 import { cleanDb, generateValidToken } from '../helpers';
 import { invalidTokenVerification } from '../helpers/validationTests-helpers';
-import { prisma } from '@/config';
 import app, { init } from '@/app';
-import ticketsRepository from '@/repositories/tickets-repository';
 
 beforeAll(async () => {
   await init();

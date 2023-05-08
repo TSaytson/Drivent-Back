@@ -24,3 +24,16 @@ export async function createHotel() {
     },
   });
 }
+
+export async function generateHotels() {
+  return [
+    {
+      name: faker.company.companyName(),
+      image: faker.image.imageUrl(),
+    },
+    {
+      name: faker.company.companyName(),
+      image: faker.image.imageUrl(),
+    },
+  ];
+}

@@ -34,7 +34,7 @@ export type PaymentBody = {
     issuer: string;
     number: number;
     name: string;
-    expirationDate: Date;
+    expirationDate: Date | string;
     cvv: number;
   };
 };
